@@ -1,0 +1,25 @@
+paths:
+  /move_file/{filename}:
+    get:
+      summary: Move a file
+      description: Moves a specified file from the source directory to the destination directory.
+      parameters:
+        - in: path
+          name: filename
+          type: string
+          required: true
+          description: Name of the file to move.
+      responses:
+        200:
+          description: Successfully moved the file.
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+              message:
+                type: string
+        400:
+          description: File not found.
+        500:
+          description: Internal server error.

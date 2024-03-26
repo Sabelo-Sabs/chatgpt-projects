@@ -1,0 +1,14 @@
+paths:
+  /list_files:
+    get:
+      summary: List all files
+      description: Retrieves a list of files from the source directory.
+      responses:
+        200:
+          description: Successfully retrieved the list of files.
+          schema:
+            type: array
+            items:
+              type: string
+        500:
+          description: Internal server error.
