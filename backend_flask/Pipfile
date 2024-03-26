@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 flask = "==3.0.2"
+flask-swagger-ui = "*"
+flask-cors = "*"
 
 [dev-packages]
 
